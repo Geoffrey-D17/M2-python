@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<head>
+  <title>Curriculum vitae</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      line-height: 1.5;
+      margin: 0;
+    }
+
+    .cv-container {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 20px;
+      max-width: 1200px;
+      margin: 50px auto;
+      border: 1px solid #ddd;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .left-column, .right-column {
+      padding: 20px;
+    }
+
+    .left-column {
+      background-color: #4472c4;
+      color: white;
+    }
+
+    .portait {
+      width: 150px;
+      border-radius: 50%;
+      display: block;
+      margin: 0 auto 20px;
+    }
+
+    .section {
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      margin-bottom: 10px;
+      font-size: 1.2rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .text-uppercase {
+      text-transform: uppercase;
+    }
+
+    ul {
+      padding-left: 20px;
+      list-style-type: disc;
+    }
+
+    .right-column h2 {
+      color: #4472c4;
+    }
+
+    .icon {
+      margin-right: 5px;
+    }
+
+    .infos li {
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+    <div class="cv-container">
+      <div class="left-column">
+        <img class="portait" src="C:/Users/geofd/OneDrive/Pictures/photo identité.jpg" />
+        <div class="section">
+          <p>
+            <i class="icon fab fa-linkedin text-darkred"></i> geoffrey-dureau
+          </p>
+        </div>
+        <div class="section">
+          <h2>À PROPOS</h2>
+          <p>
+            L'<strong>Océanographie physique</strong> est une de mes passions : l'étude de l'interface continent-océan comme l'océan profond me passionne ce qui m'a poussé à réaliser le master de <strong>Géoscience et Géophysique du Litoral</strong> à <strong>La Rochelle</strong>. 
+          </p>
+          <p>
+            De nature débrouillard et indépendant dans mon travail, j’aime apprendre de nouvelles technologies, passer du temps à résoudre des problèmes et faire de la recherche. Je fait toujours le maximum pour réaliser le meilleur tracvail possible.
+          </p>
+        </div>
+        <div class="section">
+          <h2>COMPÉTENCES</h2>
+          <ul class="skills">
+            <li><i class="icon fas fa-check-circle text-darkblue"></i> <strong>Python </strong></li>
+            <li><i class="icon fas fa-check-circle text-darkblue"></i> <strong>Océanographie Physique</strong></li>
+            <li><i class="icon fas fa-check-circle text-darkblue"></i> <strong>Matlab </strong></li>
+            <li><i class="icon fas fa-check-circle text-darkblue"></i> <strong>Excel &#124; Word</strong></li>
+            <li><i class="icon fas fa-check-circle text-darkblue"></i> <strong>Traitement de données</strong></li>
+            <li><i class="icon fas fa-check-circle text-darkblue"></i> Swacsh</li>
+            <li><i class="icon fas fa-check-circle text-darkblue"></i> QGIS</li>
+            <li><i class="icon fas fa-check-circle text-darkblue"></i> HTML</li>
+            <li><i class="icon fas fa-check-circle text-darkblue"></i> Git &#124; Github</li>
+          </ul>
+        </div>
+        <div class="section">
+          <h2>Langues</h2>
+          <p>
+            Français, langue maternelle
+            <br>
+            Anglais, compétence professionnelle
+          </p>
+        </div>
+        <div class="section">
+          <h2>Centres d'intérêt</h2>
+          <p>
+            Sport de glisse nautique, judo et marathon
+            <br>
+            Musique, BD et composition
+            <br>
+            La nature, les garnds espaces
+            <br>  
+            Les activitées manuelles et créer
+            <br>
+            L'océanographie, l'Océan
+          </p>
+        </div>
+      </div>
+      <div class="right-column">
+        <div class="header">
+          <h1>Geoffrey <span class="text-red text-uppercase">Dureau</span></h1>
+          <p>Etudiant Master Océanographie physique</p>
+          <ul class="infos">
+            <li><i class="icon fas fa-at text-red"></i> <a href="mailto:geof.dureau@gmail.com">geof.dureau@gmail.com</a></li>
+            <li><i class="icon fas fa-phone text-red"></i> 06 24 22 82 20</li>
+            <li><i class="icon fas fa-map-marker-alt text-red"></i> Rue de Coureille, 17000 La Rochelle</li>
+          </ul>
+        </div>
+        <div class="content">
+          <div class="section">
+            <h2>Expériences <br><span class="text-blue">professionelles</span></h2>
+            <p>
+              <strong>Avril 2023</strong>
+              <br>
+              <em>Stage modélisation courantologie via position Nautile</em>, Laboratoire CEFREM à Perpignan
+            </p>
+            <ul class="experience-list">
+              <li>Programation Matlab</li>
+              <li>Traitement données </li>
+              <li>Etude de la courantologie</li>
+              <li>Réalisation d'une méthode de détermination du courant à partire de la position BUC du Nautile lors de sa déscente</li>
+            </ul>
+          </div>
+          <div class="section">
+            <p>
+              <strong>Mai 2024 <i class="fas fa-long-arrow-alt-right"></i> Juillet 2024</strong>
+              <br>
+              <em>Stage Modélisation IA Cascading Golfe du Lion</em>, Laboratoire CEFREM à Perpignan
+            </p>
+            <ul class="experience-list">
+              <li>Programmation Python</li>
+              <li>Récupération données</li>
+              <li>Utilisation de réseaux de neuronnes</li>
+              <li>Traitement de données, clustering données netcdf</li>
+              <li>Réalisation de cartes</li>
+              <li>Réalisation de poster</li>
+              <li>Mise à l'eau et pilotage drone sous marin Glider</li>
+            </ul>
+          </div>
+          <div class="section">
+            <h2>Études <br><span class="text-blue">& formations</span></h2>
+            <p>
+              <strong>2017 <i class="fas fa-long-arrow-alt-right"></i> 2020</strong>
+              <br>
+              <em>Bacaloréat Scientifique</em>, Lycée Jean Giraudoux à Châteauroux
+            </p>
+            <p>
+              <strong>2020 <i class="fas fa-long-arrow-alt-right"></i> 2023</strong>
+              <br>
+              <em>Licence Sciences de la Terre</em>, La Rochelle université
+            </p>
+            <p>
+              <strong>2023 <i class="fas fa-long-arrow-alt-right"></i> 2025</strong>
+              <br>
+              <em>Master SPE parcours GGL</em>, La Rochelle université
+            </p>
+          </div>
+          <div class="section">
+            <h2>Autres <br><span class="text-blue">expériences</span></h2>
+            <p>
+              Permis B, A, bateau fluvial et côtier, CRR
+              <br>
+              Brevet National de Secourisme et de Sauvetage Aquatique
+              <br>
+              Sauveteur en mer / BNSSA pendant 5 ans saisonnier
+              <br>
+              Stadier stade Rochelais pendant 3 ans
+              <br>
+              Caissier Hyper U job etudiant en L2
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+</body>
