@@ -1,0 +1,831 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_93ecf7d3d3ce539463405f163f0680b4 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_93ecf7d3d3ce539463405f163f0680b4" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_93ecf7d3d3ce539463405f163f0680b4 = L.map(
+                "map_93ecf7d3d3ce539463405f163f0680b4",
+                {
+                    center: [46.16308, -1.15222],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 10,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_76db6d05cdd4c87c74a4b1d4b483741b = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors", "detectRetina": false, "maxNativeZoom": 19, "maxZoom": 19, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            );
+        
+    
+            tile_layer_76db6d05cdd4c87c74a4b1d4b483741b.addTo(map_93ecf7d3d3ce539463405f163f0680b4);
+        
+    
+            var marker_b30d3d8f3daac44c412c95bf04d2653f = L.marker(
+                [45.989007, -1.095572],
+                {}
+            ).addTo(map_93ecf7d3d3ce539463405f163f0680b4);
+        
+    
+            var div_icon_a742f123079aef3ef53538a71f790e64 = L.divIcon({"className": "empty", "html": "\n\u003csvg xmlns=\"http://www.w3.org/2000/svg\" height=\"24\" width=\"27\" viewBox=\"0 0 576 512\"\u003e\u003c!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--\u003e\u003cpath fill=\"#171593\" d=\"M320 96a32 32 0 1 1 -64 0 32 32 0 1 1 64 0zm21.1 80C367 158.8 384 129.4 384 96c0-53-43-96-96-96s-96 43-96 96c0 33.4 17 62.8 42.9 80L224 176c-17.7 0-32 14.3-32 32s14.3 32 32 32l32 0 0 208-48 0c-53 0-96-43-96-96l0-6.1 7 7c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9L97 263c-9.4-9.4-24.6-9.4-33.9 0L7 319c-9.4 9.4-9.4 24.6 0 33.9s24.6 9.4 33.9 0l7-7 0 6.1c0 88.4 71.6 160 160 160l80 0 80 0c88.4 0 160-71.6 160-160l0-6.1 7 7c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-56-56c-9.4-9.4-24.6-9.4-33.9 0l-56 56c-9.4 9.4-9.4 24.6 0 33.9s24.6 9.4 33.9 0l7-7 0 6.1c0 53-43 96-96 96l-48 0 0-208 32 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-10.9 0z\"/\u003e\u003c/svg\u003e\n"});
+            marker_b30d3d8f3daac44c412c95bf04d2653f.setIcon(div_icon_a742f123079aef3ef53538a71f790e64);
+        
+    
+        var popup_8de580f1db0902daf2e9cbc08570aae1 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_ba0be86658dfaa347f8515e6d4a18838 = $(`<div id="html_ba0be86658dfaa347f8515e6d4a18838" style="width: 100.0%; height: 100.0%;">Location: Fouras</div>`)[0];
+                popup_8de580f1db0902daf2e9cbc08570aae1.setContent(html_ba0be86658dfaa347f8515e6d4a18838);
+            
+        
+
+        marker_b30d3d8f3daac44c412c95bf04d2653f.bindPopup(popup_8de580f1db0902daf2e9cbc08570aae1)
+        ;
+
+        
+    
+    
+            marker_b30d3d8f3daac44c412c95bf04d2653f.bindTooltip(
+                `<div>
+                     Fouras
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_6f1a38836fb3479c0a928ce895ec1d9b = L.marker(
+                [46.312468, -0.995682],
+                {}
+            ).addTo(map_93ecf7d3d3ce539463405f163f0680b4);
+        
+    
+            var div_icon_d3b809a9d2d7733bb227c480f7c3f926 = L.divIcon({"className": "empty", "html": "\n\u003csvg xmlns=\"http://www.w3.org/2000/svg\" height=\"24\" width=\"27\" viewBox=\"0 0 576 512\"\u003e\u003c!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--\u003e\u003cpath fill=\"#171593\" d=\"M320 96a32 32 0 1 1 -64 0 32 32 0 1 1 64 0zm21.1 80C367 158.8 384 129.4 384 96c0-53-43-96-96-96s-96 43-96 96c0 33.4 17 62.8 42.9 80L224 176c-17.7 0-32 14.3-32 32s14.3 32 32 32l32 0 0 208-48 0c-53 0-96-43-96-96l0-6.1 7 7c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9L97 263c-9.4-9.4-24.6-9.4-33.9 0L7 319c-9.4 9.4-9.4 24.6 0 33.9s24.6 9.4 33.9 0l7-7 0 6.1c0 88.4 71.6 160 160 160l80 0 80 0c88.4 0 160-71.6 160-160l0-6.1 7 7c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-56-56c-9.4-9.4-24.6-9.4-33.9 0l-56 56c-9.4 9.4-9.4 24.6 0 33.9s24.6 9.4 33.9 0l7-7 0 6.1c0 53-43 96-96 96l-48 0 0-208 32 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-10.9 0z\"/\u003e\u003c/svg\u003e\n"});
+            marker_6f1a38836fb3479c0a928ce895ec1d9b.setIcon(div_icon_d3b809a9d2d7733bb227c480f7c3f926);
+        
+    
+        var popup_81c618578fca3b8d6d096a8d23115a81 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_687b925031aada085a159df50cba36a7 = $(`<div id="html_687b925031aada085a159df50cba36a7" style="width: 100.0%; height: 100.0%;">Location: Marans</div>`)[0];
+                popup_81c618578fca3b8d6d096a8d23115a81.setContent(html_687b925031aada085a159df50cba36a7);
+            
+        
+
+        marker_6f1a38836fb3479c0a928ce895ec1d9b.bindPopup(popup_81c618578fca3b8d6d096a8d23115a81)
+        ;
+
+        
+    
+    
+            marker_6f1a38836fb3479c0a928ce895ec1d9b.bindTooltip(
+                `<div>
+                     Marans
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_b77d48fe3aa4f80e74518094973a34b4 = L.marker(
+                [46.181369, -1.287579],
+                {}
+            ).addTo(map_93ecf7d3d3ce539463405f163f0680b4);
+        
+    
+            var div_icon_433a7dfab1ec313239087d4f2d7fd4e2 = L.divIcon({"className": "empty", "html": "\n\u003csvg xmlns=\"http://www.w3.org/2000/svg\" height=\"24\" width=\"27\" viewBox=\"0 0 576 512\"\u003e\u003c!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--\u003e\u003cpath fill=\"#171593\" d=\"M320 96a32 32 0 1 1 -64 0 32 32 0 1 1 64 0zm21.1 80C367 158.8 384 129.4 384 96c0-53-43-96-96-96s-96 43-96 96c0 33.4 17 62.8 42.9 80L224 176c-17.7 0-32 14.3-32 32s14.3 32 32 32l32 0 0 208-48 0c-53 0-96-43-96-96l0-6.1 7 7c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9L97 263c-9.4-9.4-24.6-9.4-33.9 0L7 319c-9.4 9.4-9.4 24.6 0 33.9s24.6 9.4 33.9 0l7-7 0 6.1c0 88.4 71.6 160 160 160l80 0 80 0c88.4 0 160-71.6 160-160l0-6.1 7 7c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-56-56c-9.4-9.4-24.6-9.4-33.9 0l-56 56c-9.4 9.4-9.4 24.6 0 33.9s24.6 9.4 33.9 0l7-7 0 6.1c0 53-43 96-96 96l-48 0 0-208 32 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-10.9 0z\"/\u003e\u003c/svg\u003e\n"});
+            marker_b77d48fe3aa4f80e74518094973a34b4.setIcon(div_icon_433a7dfab1ec313239087d4f2d7fd4e2);
+        
+    
+        var popup_42b8c0266004913c4e3653a4a1158af6 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_5b6dabcee8fd7a0d783ee2874d25d42e = $(`<div id="html_5b6dabcee8fd7a0d783ee2874d25d42e" style="width: 100.0%; height: 100.0%;">Location: La Flotte</div>`)[0];
+                popup_42b8c0266004913c4e3653a4a1158af6.setContent(html_5b6dabcee8fd7a0d783ee2874d25d42e);
+            
+        
+
+        marker_b77d48fe3aa4f80e74518094973a34b4.bindPopup(popup_42b8c0266004913c4e3653a4a1158af6)
+        ;
+
+        
+    
+    
+            marker_b77d48fe3aa4f80e74518094973a34b4.bindTooltip(
+                `<div>
+                     La Flotte
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_7e1d46c1cf7c7a54219eaaf1b8a9b0e8 = L.marker(
+                [46.2, -1.2],
+                {}
+            ).addTo(map_93ecf7d3d3ce539463405f163f0680b4);
+        
+    
+            var div_icon_ed3604f8491b9802e203876ba578750a = L.divIcon({"className": "empty", "html": "\n\u003csvg xmlns=\"http://www.w3.org/2000/svg\" height=\"24\" width=\"27\" viewBox=\"0 0 576 512\"\u003e\u003c!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--\u003e\u003cpath fill=\"#171593\" d=\"M320 96a32 32 0 1 1 -64 0 32 32 0 1 1 64 0zm21.1 80C367 158.8 384 129.4 384 96c0-53-43-96-96-96s-96 43-96 96c0 33.4 17 62.8 42.9 80L224 176c-17.7 0-32 14.3-32 32s14.3 32 32 32l32 0 0 208-48 0c-53 0-96-43-96-96l0-6.1 7 7c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9L97 263c-9.4-9.4-24.6-9.4-33.9 0L7 319c-9.4 9.4-9.4 24.6 0 33.9s24.6 9.4 33.9 0l7-7 0 6.1c0 88.4 71.6 160 160 160l80 0 80 0c88.4 0 160-71.6 160-160l0-6.1 7 7c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-56-56c-9.4-9.4-24.6-9.4-33.9 0l-56 56c-9.4 9.4-9.4 24.6 0 33.9s24.6 9.4 33.9 0l7-7 0 6.1c0 53-43 96-96 96l-48 0 0-208 32 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-10.9 0z\"/\u003e\u003c/svg\u003e\n"});
+            marker_7e1d46c1cf7c7a54219eaaf1b8a9b0e8.setIcon(div_icon_ed3604f8491b9802e203876ba578750a);
+        
+    
+        var popup_5b165edd708c82f97aa31e8222187a8f = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_3e8c47c2ea7ddf67f453c2b2b375e530 = $(`<div id="html_3e8c47c2ea7ddf67f453c2b2b375e530" style="width: 100.0%; height: 100.0%;">Location: Le Plomb</div>`)[0];
+                popup_5b165edd708c82f97aa31e8222187a8f.setContent(html_3e8c47c2ea7ddf67f453c2b2b375e530);
+            
+        
+
+        marker_7e1d46c1cf7c7a54219eaaf1b8a9b0e8.bindPopup(popup_5b165edd708c82f97aa31e8222187a8f)
+        ;
+
+        
+    
+    
+            marker_7e1d46c1cf7c7a54219eaaf1b8a9b0e8.bindTooltip(
+                `<div>
+                     Le Plomb
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_dc9c4c3c4d91be59f095033bebad1d06 = L.marker(
+                [46.2, -1.366667],
+                {}
+            ).addTo(map_93ecf7d3d3ce539463405f163f0680b4);
+        
+    
+            var div_icon_10a45f4a18978fd15a3ef994f8c90978 = L.divIcon({"className": "empty", "html": "\n\u003csvg xmlns=\"http://www.w3.org/2000/svg\" height=\"24\" width=\"27\" viewBox=\"0 0 576 512\"\u003e\u003c!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--\u003e\u003cpath fill=\"#171593\" d=\"M320 96a32 32 0 1 1 -64 0 32 32 0 1 1 64 0zm21.1 80C367 158.8 384 129.4 384 96c0-53-43-96-96-96s-96 43-96 96c0 33.4 17 62.8 42.9 80L224 176c-17.7 0-32 14.3-32 32s14.3 32 32 32l32 0 0 208-48 0c-53 0-96-43-96-96l0-6.1 7 7c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9L97 263c-9.4-9.4-24.6-9.4-33.9 0L7 319c-9.4 9.4-9.4 24.6 0 33.9s24.6 9.4 33.9 0l7-7 0 6.1c0 88.4 71.6 160 160 160l80 0 80 0c88.4 0 160-71.6 160-160l0-6.1 7 7c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-56-56c-9.4-9.4-24.6-9.4-33.9 0l-56 56c-9.4 9.4-9.4 24.6 0 33.9s24.6 9.4 33.9 0l7-7 0 6.1c0 53-43 96-96 96l-48 0 0-208 32 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-10.9 0z\"/\u003e\u003c/svg\u003e\n"});
+            marker_dc9c4c3c4d91be59f095033bebad1d06.setIcon(div_icon_10a45f4a18978fd15a3ef994f8c90978);
+        
+    
+        var popup_1eac52ced8372076a20824045822b40b = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_60e15b7fa69806cd74d5d0e4d5438e61 = $(`<div id="html_60e15b7fa69806cd74d5d0e4d5438e61" style="width: 100.0%; height: 100.0%;">Location: Saint-Martin-de-Ré</div>`)[0];
+                popup_1eac52ced8372076a20824045822b40b.setContent(html_60e15b7fa69806cd74d5d0e4d5438e61);
+            
+        
+
+        marker_dc9c4c3c4d91be59f095033bebad1d06.bindPopup(popup_1eac52ced8372076a20824045822b40b)
+        ;
+
+        
+    
+    
+            marker_dc9c4c3c4d91be59f095033bebad1d06.bindTooltip(
+                `<div>
+                     Saint-Martin-de-Ré
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_21d90bd53ff45c7cc810487119bc9b61 = L.marker(
+                [46.165762, -1.201386],
+                {}
+            ).addTo(map_93ecf7d3d3ce539463405f163f0680b4);
+        
+    
+            var div_icon_14143758cd40c84b85f7baef1e60714a = L.divIcon({"className": "empty", "html": "\n\u003csvg xmlns=\"http://www.w3.org/2000/svg\" height=\"24\" width=\"27\" viewBox=\"0 0 576 512\"\u003e\u003c!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--\u003e\u003cpath fill=\"#171593\" d=\"M320 96a32 32 0 1 1 -64 0 32 32 0 1 1 64 0zm21.1 80C367 158.8 384 129.4 384 96c0-53-43-96-96-96s-96 43-96 96c0 33.4 17 62.8 42.9 80L224 176c-17.7 0-32 14.3-32 32s14.3 32 32 32l32 0 0 208-48 0c-53 0-96-43-96-96l0-6.1 7 7c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9L97 263c-9.4-9.4-24.6-9.4-33.9 0L7 319c-9.4 9.4-9.4 24.6 0 33.9s24.6 9.4 33.9 0l7-7 0 6.1c0 88.4 71.6 160 160 160l80 0 80 0c88.4 0 160-71.6 160-160l0-6.1 7 7c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-56-56c-9.4-9.4-24.6-9.4-33.9 0l-56 56c-9.4 9.4-9.4 24.6 0 33.9s24.6 9.4 33.9 0l7-7 0 6.1c0 53-43 96-96 96l-48 0 0-208 32 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-10.9 0z\"/\u003e\u003c/svg\u003e\n"});
+            marker_21d90bd53ff45c7cc810487119bc9b61.setIcon(div_icon_14143758cd40c84b85f7baef1e60714a);
+        
+    
+        var popup_4179014181ed78fb929d86ee78a9d846 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_34731e43fb618e0b0effaee1e7d9d7c9 = $(`<div id="html_34731e43fb618e0b0effaee1e7d9d7c9" style="width: 100.0%; height: 100.0%;">Location: rade de la Pallice</div>`)[0];
+                popup_4179014181ed78fb929d86ee78a9d846.setContent(html_34731e43fb618e0b0effaee1e7d9d7c9);
+            
+        
+
+        marker_21d90bd53ff45c7cc810487119bc9b61.bindPopup(popup_4179014181ed78fb929d86ee78a9d846)
+        ;
+
+        
+    
+    
+            marker_21d90bd53ff45c7cc810487119bc9b61.bindTooltip(
+                `<div>
+                     rade de la Pallice
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_0cf3f3692d24662acb6645e1f10487bb = L.marker(
+                [46.233333, -1.116667],
+                {}
+            ).addTo(map_93ecf7d3d3ce539463405f163f0680b4);
+        
+    
+            var div_icon_ffb3c4a4a8abd1f72cbd3935d36166db = L.divIcon({"className": "empty", "html": "\n\u003csvg xmlns=\"http://www.w3.org/2000/svg\" height=\"24\" width=\"27\" viewBox=\"0 0 576 512\"\u003e\u003c!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--\u003e\u003cpath fill=\"#171593\" d=\"M320 96a32 32 0 1 1 -64 0 32 32 0 1 1 64 0zm21.1 80C367 158.8 384 129.4 384 96c0-53-43-96-96-96s-96 43-96 96c0 33.4 17 62.8 42.9 80L224 176c-17.7 0-32 14.3-32 32s14.3 32 32 32l32 0 0 208-48 0c-53 0-96-43-96-96l0-6.1 7 7c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9L97 263c-9.4-9.4-24.6-9.4-33.9 0L7 319c-9.4 9.4-9.4 24.6 0 33.9s24.6 9.4 33.9 0l7-7 0 6.1c0 88.4 71.6 160 160 160l80 0 80 0c88.4 0 160-71.6 160-160l0-6.1 7 7c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-56-56c-9.4-9.4-24.6-9.4-33.9 0l-56 56c-9.4 9.4-9.4 24.6 0 33.9s24.6 9.4 33.9 0l7-7 0 6.1c0 53-43 96-96 96l-48 0 0-208 32 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-10.9 0z\"/\u003e\u003c/svg\u003e\n"});
+            marker_0cf3f3692d24662acb6645e1f10487bb.setIcon(div_icon_ffb3c4a4a8abd1f72cbd3935d36166db);
+        
+    
+        var popup_081c05ba4bdb308fbf53a5046560dbe7 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_0e0aad0afdb7c9e136952e67d956ce8b = $(`<div id="html_0e0aad0afdb7c9e136952e67d956ce8b" style="width: 100.0%; height: 100.0%;">Location: Marselleq</div>`)[0];
+                popup_081c05ba4bdb308fbf53a5046560dbe7.setContent(html_0e0aad0afdb7c9e136952e67d956ce8b);
+            
+        
+
+        marker_0cf3f3692d24662acb6645e1f10487bb.bindPopup(popup_081c05ba4bdb308fbf53a5046560dbe7)
+        ;
+
+        
+    
+    
+            marker_0cf3f3692d24662acb6645e1f10487bb.bindTooltip(
+                `<div>
+                     Marselleq
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_567ac2fb99cc5de41c9a9ba8a404e595 = L.marker(
+                [46.233333, -1.416667],
+                {}
+            ).addTo(map_93ecf7d3d3ce539463405f163f0680b4);
+        
+    
+            var div_icon_851e30f74a5087aaa83fd23f946ca99f = L.divIcon({"className": "empty", "html": "\n\u003csvg xmlns=\"http://www.w3.org/2000/svg\" height=\"24\" width=\"27\" viewBox=\"0 0 576 512\"\u003e\u003c!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--\u003e\u003cpath fill=\"#171593\" d=\"M320 96a32 32 0 1 1 -64 0 32 32 0 1 1 64 0zm21.1 80C367 158.8 384 129.4 384 96c0-53-43-96-96-96s-96 43-96 96c0 33.4 17 62.8 42.9 80L224 176c-17.7 0-32 14.3-32 32s14.3 32 32 32l32 0 0 208-48 0c-53 0-96-43-96-96l0-6.1 7 7c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9L97 263c-9.4-9.4-24.6-9.4-33.9 0L7 319c-9.4 9.4-9.4 24.6 0 33.9s24.6 9.4 33.9 0l7-7 0 6.1c0 88.4 71.6 160 160 160l80 0 80 0c88.4 0 160-71.6 160-160l0-6.1 7 7c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-56-56c-9.4-9.4-24.6-9.4-33.9 0l-56 56c-9.4 9.4-9.4 24.6 0 33.9s24.6 9.4 33.9 0l7-7 0 6.1c0 53-43 96-96 96l-48 0 0-208 32 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-10.9 0z\"/\u003e\u003c/svg\u003e\n"});
+            marker_567ac2fb99cc5de41c9a9ba8a404e595.setIcon(div_icon_851e30f74a5087aaa83fd23f946ca99f);
+        
+    
+        var popup_95c8ee430e3bc55a8a838ed3deeade79 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_797bc530291746123be9ddc33364a04a = $(`<div id="html_797bc530291746123be9ddc33364a04a" style="width: 100.0%; height: 100.0%;">Location: Loix</div>`)[0];
+                popup_95c8ee430e3bc55a8a838ed3deeade79.setContent(html_797bc530291746123be9ddc33364a04a);
+            
+        
+
+        marker_567ac2fb99cc5de41c9a9ba8a404e595.bindPopup(popup_95c8ee430e3bc55a8a838ed3deeade79)
+        ;
+
+        
+    
+    
+            marker_567ac2fb99cc5de41c9a9ba8a404e595.bindTooltip(
+                `<div>
+                     Loix
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_0d0f635721dacd4bccb49efd1b58eac2 = L.marker(
+                [46.3666687, -1.04999995],
+                {}
+            ).addTo(map_93ecf7d3d3ce539463405f163f0680b4);
+        
+    
+            var div_icon_b2fa389c3d09ce90e6ea48ce11280348 = L.divIcon({"className": "empty", "html": "\n\u003csvg xmlns=\"http://www.w3.org/2000/svg\" height=\"24\" width=\"27\" viewBox=\"0 0 576 512\"\u003e\u003c!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--\u003e\u003cpath fill=\"#171593\" d=\"M320 96a32 32 0 1 1 -64 0 32 32 0 1 1 64 0zm21.1 80C367 158.8 384 129.4 384 96c0-53-43-96-96-96s-96 43-96 96c0 33.4 17 62.8 42.9 80L224 176c-17.7 0-32 14.3-32 32s14.3 32 32 32l32 0 0 208-48 0c-53 0-96-43-96-96l0-6.1 7 7c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9L97 263c-9.4-9.4-24.6-9.4-33.9 0L7 319c-9.4 9.4-9.4 24.6 0 33.9s24.6 9.4 33.9 0l7-7 0 6.1c0 88.4 71.6 160 160 160l80 0 80 0c88.4 0 160-71.6 160-160l0-6.1 7 7c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-56-56c-9.4-9.4-24.6-9.4-33.9 0l-56 56c-9.4 9.4-9.4 24.6 0 33.9s24.6 9.4 33.9 0l7-7 0 6.1c0 53-43 96-96 96l-48 0 0-208 32 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-10.9 0z\"/\u003e\u003c/svg\u003e\n"});
+            marker_0d0f635721dacd4bccb49efd1b58eac2.setIcon(div_icon_b2fa389c3d09ce90e6ea48ce11280348);
+        
+    
+        var popup_d12092bf6615257ededffbf5347312e7 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_add29b83ac983348a9c21eb25a17bf73 = $(`<div id="html_add29b83ac983348a9c21eb25a17bf73" style="width: 100.0%; height: 100.0%;">Location: Le Brault</div>`)[0];
+                popup_d12092bf6615257ededffbf5347312e7.setContent(html_add29b83ac983348a9c21eb25a17bf73);
+            
+        
+
+        marker_0d0f635721dacd4bccb49efd1b58eac2.bindPopup(popup_d12092bf6615257ededffbf5347312e7)
+        ;
+
+        
+    
+    
+            marker_0d0f635721dacd4bccb49efd1b58eac2.bindTooltip(
+                `<div>
+                     Le Brault
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_08a799fa08632de4196cf961302bde99 = L.marker(
+                [46.188459, -1.328716],
+                {}
+            ).addTo(map_93ecf7d3d3ce539463405f163f0680b4);
+        
+    
+            var div_icon_ea14b90d6912c29b7eba3b4f6e1d8b5f = L.divIcon({"className": "empty", "html": "\n\u003csvg xmlns=\"http://www.w3.org/2000/svg\" height=\"24\" width=\"27\" viewBox=\"0 0 576 512\"\u003e\u003c!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--\u003e\u003cpath fill=\"#171593\" d=\"M320 96a32 32 0 1 1 -64 0 32 32 0 1 1 64 0zm21.1 80C367 158.8 384 129.4 384 96c0-53-43-96-96-96s-96 43-96 96c0 33.4 17 62.8 42.9 80L224 176c-17.7 0-32 14.3-32 32s14.3 32 32 32l32 0 0 208-48 0c-53 0-96-43-96-96l0-6.1 7 7c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9L97 263c-9.4-9.4-24.6-9.4-33.9 0L7 319c-9.4 9.4-9.4 24.6 0 33.9s24.6 9.4 33.9 0l7-7 0 6.1c0 88.4 71.6 160 160 160l80 0 80 0c88.4 0 160-71.6 160-160l0-6.1 7 7c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-56-56c-9.4-9.4-24.6-9.4-33.9 0l-56 56c-9.4 9.4-9.4 24.6 0 33.9s24.6 9.4 33.9 0l7-7 0 6.1c0 53-43 96-96 96l-48 0 0-208 32 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-10.9 0z\"/\u003e\u003c/svg\u003e\n"});
+            marker_08a799fa08632de4196cf961302bde99.setIcon(div_icon_ea14b90d6912c29b7eba3b4f6e1d8b5f);
+        
+    
+        var popup_95035760be5edc04fd7b1b058fda091f = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_9b07f39506b3698d6d15274cbcb059e2 = $(`<div id="html_9b07f39506b3698d6d15274cbcb059e2" style="width: 100.0%; height: 100.0%;">Location: La Flotte-en-Ré</div>`)[0];
+                popup_95035760be5edc04fd7b1b058fda091f.setContent(html_9b07f39506b3698d6d15274cbcb059e2);
+            
+        
+
+        marker_08a799fa08632de4196cf961302bde99.bindPopup(popup_95035760be5edc04fd7b1b058fda091f)
+        ;
+
+        
+    
+    
+            marker_08a799fa08632de4196cf961302bde99.bindTooltip(
+                `<div>
+                     La Flotte-en-Ré
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_a00b5c8aa01e2d63f27c88ee09e3c472 = L.marker(
+                [46.166667, -1.266667],
+                {}
+            ).addTo(map_93ecf7d3d3ce539463405f163f0680b4);
+        
+    
+            var div_icon_25b3bb19ba6e3d7c569e7dbe53f3ea5f = L.divIcon({"className": "empty", "html": "\n\u003csvg xmlns=\"http://www.w3.org/2000/svg\" height=\"24\" width=\"27\" viewBox=\"0 0 576 512\"\u003e\u003c!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--\u003e\u003cpath fill=\"#171593\" d=\"M320 96a32 32 0 1 1 -64 0 32 32 0 1 1 64 0zm21.1 80C367 158.8 384 129.4 384 96c0-53-43-96-96-96s-96 43-96 96c0 33.4 17 62.8 42.9 80L224 176c-17.7 0-32 14.3-32 32s14.3 32 32 32l32 0 0 208-48 0c-53 0-96-43-96-96l0-6.1 7 7c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9L97 263c-9.4-9.4-24.6-9.4-33.9 0L7 319c-9.4 9.4-9.4 24.6 0 33.9s24.6 9.4 33.9 0l7-7 0 6.1c0 88.4 71.6 160 160 160l80 0 80 0c88.4 0 160-71.6 160-160l0-6.1 7 7c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-56-56c-9.4-9.4-24.6-9.4-33.9 0l-56 56c-9.4 9.4-9.4 24.6 0 33.9s24.6 9.4 33.9 0l7-7 0 6.1c0 53-43 96-96 96l-48 0 0-208 32 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-10.9 0z\"/\u003e\u003c/svg\u003e\n"});
+            marker_a00b5c8aa01e2d63f27c88ee09e3c472.setIcon(div_icon_25b3bb19ba6e3d7c569e7dbe53f3ea5f);
+        
+    
+        var popup_0d06fbaa87a6d0a648b737f52aed8fbc = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_a4a896ff2f8628ed569e9327bfa77a3b = $(`<div id="html_a4a896ff2f8628ed569e9327bfa77a3b" style="width: 100.0%; height: 100.0%;">Location: Rivedoux</div>`)[0];
+                popup_0d06fbaa87a6d0a648b737f52aed8fbc.setContent(html_a4a896ff2f8628ed569e9327bfa77a3b);
+            
+        
+
+        marker_a00b5c8aa01e2d63f27c88ee09e3c472.bindPopup(popup_0d06fbaa87a6d0a648b737f52aed8fbc)
+        ;
+
+        
+    
+    
+            marker_a00b5c8aa01e2d63f27c88ee09e3c472.bindTooltip(
+                `<div>
+                     Rivedoux
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_19fed22d074e0e879b95b525bc788685 = L.marker(
+                [46.25, -1.366667],
+                {}
+            ).addTo(map_93ecf7d3d3ce539463405f163f0680b4);
+        
+    
+            var div_icon_0356350d2906f7878825031371c0437c = L.divIcon({"className": "empty", "html": "\n\u003csvg xmlns=\"http://www.w3.org/2000/svg\" height=\"24\" width=\"27\" viewBox=\"0 0 576 512\"\u003e\u003c!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--\u003e\u003cpath fill=\"#171593\" d=\"M320 96a32 32 0 1 1 -64 0 32 32 0 1 1 64 0zm21.1 80C367 158.8 384 129.4 384 96c0-53-43-96-96-96s-96 43-96 96c0 33.4 17 62.8 42.9 80L224 176c-17.7 0-32 14.3-32 32s14.3 32 32 32l32 0 0 208-48 0c-53 0-96-43-96-96l0-6.1 7 7c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9L97 263c-9.4-9.4-24.6-9.4-33.9 0L7 319c-9.4 9.4-9.4 24.6 0 33.9s24.6 9.4 33.9 0l7-7 0 6.1c0 88.4 71.6 160 160 160l80 0 80 0c88.4 0 160-71.6 160-160l0-6.1 7 7c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-56-56c-9.4-9.4-24.6-9.4-33.9 0l-56 56c-9.4 9.4-9.4 24.6 0 33.9s24.6 9.4 33.9 0l7-7 0 6.1c0 53-43 96-96 96l-48 0 0-208 32 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-10.9 0z\"/\u003e\u003c/svg\u003e\n"});
+            marker_19fed22d074e0e879b95b525bc788685.setIcon(div_icon_0356350d2906f7878825031371c0437c);
+        
+    
+        var popup_61044b73dd1ea67c768d38747d3b3111 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_c5907157565f9586fb6aaabf15a05c5e = $(`<div id="html_c5907157565f9586fb6aaabf15a05c5e" style="width: 100.0%; height: 100.0%;">Location: Breton narrows</div>`)[0];
+                popup_61044b73dd1ea67c768d38747d3b3111.setContent(html_c5907157565f9586fb6aaabf15a05c5e);
+            
+        
+
+        marker_19fed22d074e0e879b95b525bc788685.bindPopup(popup_61044b73dd1ea67c768d38747d3b3111)
+        ;
+
+        
+    
+    
+            marker_19fed22d074e0e879b95b525bc788685.bindTooltip(
+                `<div>
+                     Breton narrows
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_60a33429463a58aee75d4e5b7fbbf164 = L.marker(
+                [46.166667, -1.15],
+                {}
+            ).addTo(map_93ecf7d3d3ce539463405f163f0680b4);
+        
+    
+            var div_icon_9fef863174eaa5bc08c8ebc4e2004153 = L.divIcon({"className": "empty", "html": "\n\u003csvg xmlns=\"http://www.w3.org/2000/svg\" height=\"24\" width=\"27\" viewBox=\"0 0 576 512\"\u003e\u003c!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--\u003e\u003cpath fill=\"#171593\" d=\"M320 96a32 32 0 1 1 -64 0 32 32 0 1 1 64 0zm21.1 80C367 158.8 384 129.4 384 96c0-53-43-96-96-96s-96 43-96 96c0 33.4 17 62.8 42.9 80L224 176c-17.7 0-32 14.3-32 32s14.3 32 32 32l32 0 0 208-48 0c-53 0-96-43-96-96l0-6.1 7 7c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9L97 263c-9.4-9.4-24.6-9.4-33.9 0L7 319c-9.4 9.4-9.4 24.6 0 33.9s24.6 9.4 33.9 0l7-7 0 6.1c0 88.4 71.6 160 160 160l80 0 80 0c88.4 0 160-71.6 160-160l0-6.1 7 7c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-56-56c-9.4-9.4-24.6-9.4-33.9 0l-56 56c-9.4 9.4-9.4 24.6 0 33.9s24.6 9.4 33.9 0l7-7 0 6.1c0 53-43 96-96 96l-48 0 0-208 32 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-10.9 0z\"/\u003e\u003c/svg\u003e\n"});
+            marker_60a33429463a58aee75d4e5b7fbbf164.setIcon(div_icon_9fef863174eaa5bc08c8ebc4e2004153);
+        
+    
+        var popup_5e0e669fe958d8cce640aae8426e1ab4 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_aa999dfbe6f9e96939c6f2aa31a03f8a = $(`<div id="html_aa999dfbe6f9e96939c6f2aa31a03f8a" style="width: 100.0%; height: 100.0%;">Location: La Rochelle</div>`)[0];
+                popup_5e0e669fe958d8cce640aae8426e1ab4.setContent(html_aa999dfbe6f9e96939c6f2aa31a03f8a);
+            
+        
+
+        marker_60a33429463a58aee75d4e5b7fbbf164.bindPopup(popup_5e0e669fe958d8cce640aae8426e1ab4)
+        ;
+
+        
+    
+    
+            marker_60a33429463a58aee75d4e5b7fbbf164.bindTooltip(
+                `<div>
+                     La Rochelle
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_dff11e08a5561172323b3b5b9048ad9b = L.marker(
+                [46.283333, -1.1],
+                {}
+            ).addTo(map_93ecf7d3d3ce539463405f163f0680b4);
+        
+    
+            var div_icon_39fa260048f6ec09dc83b18ab157725f = L.divIcon({"className": "empty", "html": "\n\u003csvg xmlns=\"http://www.w3.org/2000/svg\" height=\"24\" width=\"27\" viewBox=\"0 0 576 512\"\u003e\u003c!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--\u003e\u003cpath fill=\"#171593\" d=\"M320 96a32 32 0 1 1 -64 0 32 32 0 1 1 64 0zm21.1 80C367 158.8 384 129.4 384 96c0-53-43-96-96-96s-96 43-96 96c0 33.4 17 62.8 42.9 80L224 176c-17.7 0-32 14.3-32 32s14.3 32 32 32l32 0 0 208-48 0c-53 0-96-43-96-96l0-6.1 7 7c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9L97 263c-9.4-9.4-24.6-9.4-33.9 0L7 319c-9.4 9.4-9.4 24.6 0 33.9s24.6 9.4 33.9 0l7-7 0 6.1c0 88.4 71.6 160 160 160l80 0 80 0c88.4 0 160-71.6 160-160l0-6.1 7 7c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-56-56c-9.4-9.4-24.6-9.4-33.9 0l-56 56c-9.4 9.4-9.4 24.6 0 33.9s24.6 9.4 33.9 0l7-7 0 6.1c0 53-43 96-96 96l-48 0 0-208 32 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-10.9 0z\"/\u003e\u003c/svg\u003e\n"});
+            marker_dff11e08a5561172323b3b5b9048ad9b.setIcon(div_icon_39fa260048f6ec09dc83b18ab157725f);
+        
+    
+        var popup_03cae827eeb27b271cae3b34b90ce9dc = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_16165d6a063cfe97a0b39709ee54bf25 = $(`<div id="html_16165d6a063cfe97a0b39709ee54bf25" style="width: 100.0%; height: 100.0%;">Location: Charron</div>`)[0];
+                popup_03cae827eeb27b271cae3b34b90ce9dc.setContent(html_16165d6a063cfe97a0b39709ee54bf25);
+            
+        
+
+        marker_dff11e08a5561172323b3b5b9048ad9b.bindPopup(popup_03cae827eeb27b271cae3b34b90ce9dc)
+        ;
+
+        
+    
+    
+            marker_dff11e08a5561172323b3b5b9048ad9b.bindTooltip(
+                `<div>
+                     Charron
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_1de5c528e82d295e767d8e6d3180e10a = L.marker(
+                [46.2, -1.416667],
+                {}
+            ).addTo(map_93ecf7d3d3ce539463405f163f0680b4);
+        
+    
+            var div_icon_cd42c79bf106fdcdaf315edf84e183ff = L.divIcon({"className": "empty", "html": "\n\u003csvg xmlns=\"http://www.w3.org/2000/svg\" height=\"24\" width=\"27\" viewBox=\"0 0 576 512\"\u003e\u003c!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--\u003e\u003cpath fill=\"#171593\" d=\"M320 96a32 32 0 1 1 -64 0 32 32 0 1 1 64 0zm21.1 80C367 158.8 384 129.4 384 96c0-53-43-96-96-96s-96 43-96 96c0 33.4 17 62.8 42.9 80L224 176c-17.7 0-32 14.3-32 32s14.3 32 32 32l32 0 0 208-48 0c-53 0-96-43-96-96l0-6.1 7 7c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9L97 263c-9.4-9.4-24.6-9.4-33.9 0L7 319c-9.4 9.4-9.4 24.6 0 33.9s24.6 9.4 33.9 0l7-7 0 6.1c0 88.4 71.6 160 160 160l80 0 80 0c88.4 0 160-71.6 160-160l0-6.1 7 7c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-56-56c-9.4-9.4-24.6-9.4-33.9 0l-56 56c-9.4 9.4-9.4 24.6 0 33.9s24.6 9.4 33.9 0l7-7 0 6.1c0 53-43 96-96 96l-48 0 0-208 32 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-10.9 0z\"/\u003e\u003c/svg\u003e\n"});
+            marker_1de5c528e82d295e767d8e6d3180e10a.setIcon(div_icon_cd42c79bf106fdcdaf315edf84e183ff);
+        
+    
+        var popup_3c5747a50ff0b64b02497f2dd968fb7e = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_371deb5b38bbe90f03451afde536f5f5 = $(`<div id="html_371deb5b38bbe90f03451afde536f5f5" style="width: 100.0%; height: 100.0%;">Location: île de Ré</div>`)[0];
+                popup_3c5747a50ff0b64b02497f2dd968fb7e.setContent(html_371deb5b38bbe90f03451afde536f5f5);
+            
+        
+
+        marker_1de5c528e82d295e767d8e6d3180e10a.bindPopup(popup_3c5747a50ff0b64b02497f2dd968fb7e)
+        ;
+
+        
+    
+    
+            marker_1de5c528e82d295e767d8e6d3180e10a.bindTooltip(
+                `<div>
+                     île de Ré
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_8067fb1d00eadaa62f9f2e1bd754c977 = L.marker(
+                [46.25, -1.083333],
+                {}
+            ).addTo(map_93ecf7d3d3ce539463405f163f0680b4);
+        
+    
+            var div_icon_9a25a7101aea26d93b9e71679791cbcd = L.divIcon({"className": "empty", "html": "\n\u003csvg xmlns=\"http://www.w3.org/2000/svg\" height=\"24\" width=\"27\" viewBox=\"0 0 576 512\"\u003e\u003c!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--\u003e\u003cpath fill=\"#171593\" d=\"M320 96a32 32 0 1 1 -64 0 32 32 0 1 1 64 0zm21.1 80C367 158.8 384 129.4 384 96c0-53-43-96-96-96s-96 43-96 96c0 33.4 17 62.8 42.9 80L224 176c-17.7 0-32 14.3-32 32s14.3 32 32 32l32 0 0 208-48 0c-53 0-96-43-96-96l0-6.1 7 7c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9L97 263c-9.4-9.4-24.6-9.4-33.9 0L7 319c-9.4 9.4-9.4 24.6 0 33.9s24.6 9.4 33.9 0l7-7 0 6.1c0 88.4 71.6 160 160 160l80 0 80 0c88.4 0 160-71.6 160-160l0-6.1 7 7c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-56-56c-9.4-9.4-24.6-9.4-33.9 0l-56 56c-9.4 9.4-9.4 24.6 0 33.9s24.6 9.4 33.9 0l7-7 0 6.1c0 53-43 96-96 96l-48 0 0-208 32 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-10.9 0z\"/\u003e\u003c/svg\u003e\n"});
+            marker_8067fb1d00eadaa62f9f2e1bd754c977.setIcon(div_icon_9a25a7101aea26d93b9e71679791cbcd);
+        
+    
+        var popup_6a017ce4b14f4d9aa9a12595d7917d94 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_1d567b92d8ed54c3ac8a839c06d67533 = $(`<div id="html_1d567b92d8ed54c3ac8a839c06d67533" style="width: 100.0%; height: 100.0%;">Location: Esnandes</div>`)[0];
+                popup_6a017ce4b14f4d9aa9a12595d7917d94.setContent(html_1d567b92d8ed54c3ac8a839c06d67533);
+            
+        
+
+        marker_8067fb1d00eadaa62f9f2e1bd754c977.bindPopup(popup_6a017ce4b14f4d9aa9a12595d7917d94)
+        ;
+
+        
+    
+    
+            marker_8067fb1d00eadaa62f9f2e1bd754c977.bindTooltip(
+                `<div>
+                     Esnandes
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_e98e40212c318c375966a55581a94ac2 = L.marker(
+                [46.216667, -1.516667],
+                {}
+            ).addTo(map_93ecf7d3d3ce539463405f163f0680b4);
+        
+    
+            var div_icon_c192b4d070933bb547d5b0810c770c55 = L.divIcon({"className": "empty", "html": "\n\u003csvg xmlns=\"http://www.w3.org/2000/svg\" height=\"24\" width=\"27\" viewBox=\"0 0 576 512\"\u003e\u003c!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--\u003e\u003cpath fill=\"#171593\" d=\"M320 96a32 32 0 1 1 -64 0 32 32 0 1 1 64 0zm21.1 80C367 158.8 384 129.4 384 96c0-53-43-96-96-96s-96 43-96 96c0 33.4 17 62.8 42.9 80L224 176c-17.7 0-32 14.3-32 32s14.3 32 32 32l32 0 0 208-48 0c-53 0-96-43-96-96l0-6.1 7 7c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9L97 263c-9.4-9.4-24.6-9.4-33.9 0L7 319c-9.4 9.4-9.4 24.6 0 33.9s24.6 9.4 33.9 0l7-7 0 6.1c0 88.4 71.6 160 160 160l80 0 80 0c88.4 0 160-71.6 160-160l0-6.1 7 7c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-56-56c-9.4-9.4-24.6-9.4-33.9 0l-56 56c-9.4 9.4-9.4 24.6 0 33.9s24.6 9.4 33.9 0l7-7 0 6.1c0 53-43 96-96 96l-48 0 0-208 32 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-10.9 0z\"/\u003e\u003c/svg\u003e\n"});
+            marker_e98e40212c318c375966a55581a94ac2.setIcon(div_icon_c192b4d070933bb547d5b0810c770c55);
+        
+    
+        var popup_04050263ae5db5f6957512f237fc5d7d = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_0bcf21f90ca151cc2f2ce2f5cc1e017c = $(`<div id="html_0bcf21f90ca151cc2f2ce2f5cc1e017c" style="width: 100.0%; height: 100.0%;">Location: Ars-en-Ré</div>`)[0];
+                popup_04050263ae5db5f6957512f237fc5d7d.setContent(html_0bcf21f90ca151cc2f2ce2f5cc1e017c);
+            
+        
+
+        marker_e98e40212c318c375966a55581a94ac2.bindPopup(popup_04050263ae5db5f6957512f237fc5d7d)
+        ;
+
+        
+    
+    
+            marker_e98e40212c318c375966a55581a94ac2.bindTooltip(
+                `<div>
+                     Ars-en-Ré
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_ee6bbfea41e2874814ea9656064e3572 = L.marker(
+                [45.943666, -0.97043],
+                {}
+            ).addTo(map_93ecf7d3d3ce539463405f163f0680b4);
+        
+    
+            var div_icon_79a970062efe23a1a57cac00724bd93e = L.divIcon({"className": "empty", "html": "\n\u003csvg xmlns=\"http://www.w3.org/2000/svg\" height=\"24\" width=\"27\" viewBox=\"0 0 576 512\"\u003e\u003c!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--\u003e\u003cpath fill=\"#171593\" d=\"M320 96a32 32 0 1 1 -64 0 32 32 0 1 1 64 0zm21.1 80C367 158.8 384 129.4 384 96c0-53-43-96-96-96s-96 43-96 96c0 33.4 17 62.8 42.9 80L224 176c-17.7 0-32 14.3-32 32s14.3 32 32 32l32 0 0 208-48 0c-53 0-96-43-96-96l0-6.1 7 7c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9L97 263c-9.4-9.4-24.6-9.4-33.9 0L7 319c-9.4 9.4-9.4 24.6 0 33.9s24.6 9.4 33.9 0l7-7 0 6.1c0 88.4 71.6 160 160 160l80 0 80 0c88.4 0 160-71.6 160-160l0-6.1 7 7c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-56-56c-9.4-9.4-24.6-9.4-33.9 0l-56 56c-9.4 9.4-9.4 24.6 0 33.9s24.6 9.4 33.9 0l7-7 0 6.1c0 53-43 96-96 96l-48 0 0-208 32 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-10.9 0z\"/\u003e\u003c/svg\u003e\n"});
+            marker_ee6bbfea41e2874814ea9656064e3572.setIcon(div_icon_79a970062efe23a1a57cac00724bd93e);
+        
+    
+        var popup_3aac5ff6e019022f6f45c6d332fe166e = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_43e935af9badee4777b79cf82a10ba77 = $(`<div id="html_43e935af9badee4777b79cf82a10ba77" style="width: 100.0%; height: 100.0%;">Location: Rochefort</div>`)[0];
+                popup_3aac5ff6e019022f6f45c6d332fe166e.setContent(html_43e935af9badee4777b79cf82a10ba77);
+            
+        
+
+        marker_ee6bbfea41e2874814ea9656064e3572.bindPopup(popup_3aac5ff6e019022f6f45c6d332fe166e)
+        ;
+
+        
+    
+    
+            marker_ee6bbfea41e2874814ea9656064e3572.bindTooltip(
+                `<div>
+                     Rochefort
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_6304eb0392df432d356fd85ff398c523 = L.marker(
+                [45.933333, -1.0],
+                {}
+            ).addTo(map_93ecf7d3d3ce539463405f163f0680b4);
+        
+    
+            var div_icon_9d9a2948862b65a80510ce8eb861602b = L.divIcon({"className": "empty", "html": "\n\u003csvg xmlns=\"http://www.w3.org/2000/svg\" height=\"24\" width=\"27\" viewBox=\"0 0 576 512\"\u003e\u003c!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--\u003e\u003cpath fill=\"#171593\" d=\"M320 96a32 32 0 1 1 -64 0 32 32 0 1 1 64 0zm21.1 80C367 158.8 384 129.4 384 96c0-53-43-96-96-96s-96 43-96 96c0 33.4 17 62.8 42.9 80L224 176c-17.7 0-32 14.3-32 32s14.3 32 32 32l32 0 0 208-48 0c-53 0-96-43-96-96l0-6.1 7 7c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9L97 263c-9.4-9.4-24.6-9.4-33.9 0L7 319c-9.4 9.4-9.4 24.6 0 33.9s24.6 9.4 33.9 0l7-7 0 6.1c0 88.4 71.6 160 160 160l80 0 80 0c88.4 0 160-71.6 160-160l0-6.1 7 7c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-56-56c-9.4-9.4-24.6-9.4-33.9 0l-56 56c-9.4 9.4-9.4 24.6 0 33.9s24.6 9.4 33.9 0l7-7 0 6.1c0 53-43 96-96 96l-48 0 0-208 32 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-10.9 0z\"/\u003e\u003c/svg\u003e\n"});
+            marker_6304eb0392df432d356fd85ff398c523.setIcon(div_icon_9d9a2948862b65a80510ce8eb861602b);
+        
+    
+        var popup_0fba5bb9f5e35040a5c709846e8afabb = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_cd48054c486154ebfab8e48bf1fb31d3 = $(`<div id="html_cd48054c486154ebfab8e48bf1fb31d3" style="width: 100.0%; height: 100.0%;">Location: Soubise</div>`)[0];
+                popup_0fba5bb9f5e35040a5c709846e8afabb.setContent(html_cd48054c486154ebfab8e48bf1fb31d3);
+            
+        
+
+        marker_6304eb0392df432d356fd85ff398c523.bindPopup(popup_0fba5bb9f5e35040a5c709846e8afabb)
+        ;
+
+        
+    
+    
+            marker_6304eb0392df432d356fd85ff398c523.bindTooltip(
+                `<div>
+                     Soubise
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_177c69ccd79e5701a53e3b6bddf698a8 = L.marker(
+                [46.2, -1.4],
+                {}
+            ).addTo(map_93ecf7d3d3ce539463405f163f0680b4);
+        
+    
+            var div_icon_33a668ddbbee7b174dddca52185990cb = L.divIcon({"className": "empty", "html": "\n\u003csvg xmlns=\"http://www.w3.org/2000/svg\" height=\"24\" width=\"27\" viewBox=\"0 0 576 512\"\u003e\u003c!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--\u003e\u003cpath fill=\"#171593\" d=\"M320 96a32 32 0 1 1 -64 0 32 32 0 1 1 64 0zm21.1 80C367 158.8 384 129.4 384 96c0-53-43-96-96-96s-96 43-96 96c0 33.4 17 62.8 42.9 80L224 176c-17.7 0-32 14.3-32 32s14.3 32 32 32l32 0 0 208-48 0c-53 0-96-43-96-96l0-6.1 7 7c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9L97 263c-9.4-9.4-24.6-9.4-33.9 0L7 319c-9.4 9.4-9.4 24.6 0 33.9s24.6 9.4 33.9 0l7-7 0 6.1c0 88.4 71.6 160 160 160l80 0 80 0c88.4 0 160-71.6 160-160l0-6.1 7 7c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-56-56c-9.4-9.4-24.6-9.4-33.9 0l-56 56c-9.4 9.4-9.4 24.6 0 33.9s24.6 9.4 33.9 0l7-7 0 6.1c0 53-43 96-96 96l-48 0 0-208 32 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-10.9 0z\"/\u003e\u003c/svg\u003e\n"});
+            marker_177c69ccd79e5701a53e3b6bddf698a8.setIcon(div_icon_33a668ddbbee7b174dddca52185990cb);
+        
+    
+        var popup_8832d8d9c0b2750d9a3c7eb824750c69 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_d043310cd01dd65dd6b73083d85af550 = $(`<div id="html_d043310cd01dd65dd6b73083d85af550" style="width: 100.0%; height: 100.0%;">Location: La Couarde</div>`)[0];
+                popup_8832d8d9c0b2750d9a3c7eb824750c69.setContent(html_d043310cd01dd65dd6b73083d85af550);
+            
+        
+
+        marker_177c69ccd79e5701a53e3b6bddf698a8.bindPopup(popup_8832d8d9c0b2750d9a3c7eb824750c69)
+        ;
+
+        
+    
+    
+            marker_177c69ccd79e5701a53e3b6bddf698a8.bindTooltip(
+                `<div>
+                     La Couarde
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_daadeea749e8703715dc555cdf5cd023 = L.marker(
+                [46.193652, -1.186724],
+                {}
+            ).addTo(map_93ecf7d3d3ce539463405f163f0680b4);
+        
+    
+            var div_icon_9a680d1c6b9d6390dc39344eca8d5d49 = L.divIcon({"className": "empty", "html": "\n\u003csvg xmlns=\"http://www.w3.org/2000/svg\" height=\"24\" width=\"27\" viewBox=\"0 0 576 512\"\u003e\u003c!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--\u003e\u003cpath fill=\"#171593\" d=\"M320 96a32 32 0 1 1 -64 0 32 32 0 1 1 64 0zm21.1 80C367 158.8 384 129.4 384 96c0-53-43-96-96-96s-96 43-96 96c0 33.4 17 62.8 42.9 80L224 176c-17.7 0-32 14.3-32 32s14.3 32 32 32l32 0 0 208-48 0c-53 0-96-43-96-96l0-6.1 7 7c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9L97 263c-9.4-9.4-24.6-9.4-33.9 0L7 319c-9.4 9.4-9.4 24.6 0 33.9s24.6 9.4 33.9 0l7-7 0 6.1c0 88.4 71.6 160 160 160l80 0 80 0c88.4 0 160-71.6 160-160l0-6.1 7 7c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-56-56c-9.4-9.4-24.6-9.4-33.9 0l-56 56c-9.4 9.4-9.4 24.6 0 33.9s24.6 9.4 33.9 0l7-7 0 6.1c0 53-43 96-96 96l-48 0 0-208 32 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-10.9 0z\"/\u003e\u003c/svg\u003e\n"});
+            marker_daadeea749e8703715dc555cdf5cd023.setIcon(div_icon_9a680d1c6b9d6390dc39344eca8d5d49);
+        
+    
+        var popup_8d5dfd4b31483064e6ae7a8e7b1286c8 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_9b2175f6cb9580ccb6af1bfb57688235 = $(`<div id="html_9b2175f6cb9580ccb6af1bfb57688235" style="width: 100.0%; height: 100.0%;">Location: L'Houmée</div>`)[0];
+                popup_8d5dfd4b31483064e6ae7a8e7b1286c8.setContent(html_9b2175f6cb9580ccb6af1bfb57688235);
+            
+        
+
+        marker_daadeea749e8703715dc555cdf5cd023.bindPopup(popup_8d5dfd4b31483064e6ae7a8e7b1286c8)
+        ;
+
+        
+    
+    
+            marker_daadeea749e8703715dc555cdf5cd023.bindTooltip(
+                `<div>
+                     L'Houmée
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_1c07768be551acadd184590a0e65da8e = L.marker(
+                [46.0125, -1.175],
+                {}
+            ).addTo(map_93ecf7d3d3ce539463405f163f0680b4);
+        
+    
+            var div_icon_528f78530b7711c061bcee8542733036 = L.divIcon({"className": "empty", "html": "\n\u003csvg xmlns=\"http://www.w3.org/2000/svg\" height=\"24\" width=\"27\" viewBox=\"0 0 576 512\"\u003e\u003c!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--\u003e\u003cpath fill=\"#171593\" d=\"M320 96a32 32 0 1 1 -64 0 32 32 0 1 1 64 0zm21.1 80C367 158.8 384 129.4 384 96c0-53-43-96-96-96s-96 43-96 96c0 33.4 17 62.8 42.9 80L224 176c-17.7 0-32 14.3-32 32s14.3 32 32 32l32 0 0 208-48 0c-53 0-96-43-96-96l0-6.1 7 7c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9L97 263c-9.4-9.4-24.6-9.4-33.9 0L7 319c-9.4 9.4-9.4 24.6 0 33.9s24.6 9.4 33.9 0l7-7 0 6.1c0 88.4 71.6 160 160 160l80 0 80 0c88.4 0 160-71.6 160-160l0-6.1 7 7c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-56-56c-9.4-9.4-24.6-9.4-33.9 0l-56 56c-9.4 9.4-9.4 24.6 0 33.9s24.6 9.4 33.9 0l7-7 0 6.1c0 53-43 96-96 96l-48 0 0-208 32 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-10.9 0z\"/\u003e\u003c/svg\u003e\n"});
+            marker_1c07768be551acadd184590a0e65da8e.setIcon(div_icon_528f78530b7711c061bcee8542733036);
+        
+    
+        var popup_edc35694cbd866c77b3f99592c4fc723 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_c41f58f91e63100848fc776b60edffc4 = $(`<div id="html_c41f58f91e63100848fc776b60edffc4" style="width: 100.0%; height: 100.0%;">Location: île d'Aix</div>`)[0];
+                popup_edc35694cbd866c77b3f99592c4fc723.setContent(html_c41f58f91e63100848fc776b60edffc4);
+            
+        
+
+        marker_1c07768be551acadd184590a0e65da8e.bindPopup(popup_edc35694cbd866c77b3f99592c4fc723)
+        ;
+
+        
+    
+    
+            marker_1c07768be551acadd184590a0e65da8e.bindTooltip(
+                `<div>
+                     île d'Aix
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_5d4118718e8ed5501de4d21c36052dda = L.marker(
+                [46.04498, -1.204802],
+                {}
+            ).addTo(map_93ecf7d3d3ce539463405f163f0680b4);
+        
+    
+            var div_icon_84ea5b5e3a3e818f6718fa5c38be25c7 = L.divIcon({"className": "empty", "html": "\n\u003csvg xmlns=\"http://www.w3.org/2000/svg\" height=\"24\" width=\"27\" viewBox=\"0 0 576 512\"\u003e\u003c!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--\u003e\u003cpath fill=\"#171593\" d=\"M320 96a32 32 0 1 1 -64 0 32 32 0 1 1 64 0zm21.1 80C367 158.8 384 129.4 384 96c0-53-43-96-96-96s-96 43-96 96c0 33.4 17 62.8 42.9 80L224 176c-17.7 0-32 14.3-32 32s14.3 32 32 32l32 0 0 208-48 0c-53 0-96-43-96-96l0-6.1 7 7c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9L97 263c-9.4-9.4-24.6-9.4-33.9 0L7 319c-9.4 9.4-9.4 24.6 0 33.9s24.6 9.4 33.9 0l7-7 0 6.1c0 88.4 71.6 160 160 160l80 0 80 0c88.4 0 160-71.6 160-160l0-6.1 7 7c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-56-56c-9.4-9.4-24.6-9.4-33.9 0l-56 56c-9.4 9.4-9.4 24.6 0 33.9s24.6 9.4 33.9 0l7-7 0 6.1c0 53-43 96-96 96l-48 0 0-208 32 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-10.9 0z\"/\u003e\u003c/svg\u003e\n"});
+            marker_5d4118718e8ed5501de4d21c36052dda.setIcon(div_icon_84ea5b5e3a3e818f6718fa5c38be25c7);
+        
+    
+        var popup_a1bdf96070925ac62e036d5e62c52722 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_785570524fa8ce3c078e8e8d638dd163 = $(`<div id="html_785570524fa8ce3c078e8e8d638dd163" style="width: 100.0%; height: 100.0%;">Location: Pertuis sea</div>`)[0];
+                popup_a1bdf96070925ac62e036d5e62c52722.setContent(html_785570524fa8ce3c078e8e8d638dd163);
+            
+        
+
+        marker_5d4118718e8ed5501de4d21c36052dda.bindPopup(popup_a1bdf96070925ac62e036d5e62c52722)
+        ;
+
+        
+    
+    
+            marker_5d4118718e8ed5501de4d21c36052dda.bindTooltip(
+                `<div>
+                     Pertuis sea
+                 </div>`,
+                {"sticky": true}
+            );
+        
+</script>
+</html>
