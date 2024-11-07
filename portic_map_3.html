@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <title>API Portic</title>
+    <style>
+        body {
+            background-color: #f0f8ff;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        .container {
+            margin: 0 auto;
+            width: 80%;
+            padding: 100px;
+            display: block;
+        }
+        h1, h2 {
+            color: #333;
+        }
+        table {
+            margin: 5 auto;
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 5px solid #ccc;
+            padding: 0px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Avec l'API Portic</h1>
+        
+        <h2>Choisissez un pays</h2>
+        <form>
+            <select id="country-select" name="pays">
+                {% for country in unique_countries %}
+                    <option value="{{ country }}">{{ country }}</option>
+                {% endfor %}
+            </select>
+        </form>
+
+        <h2>La carte des stations GNSS</h2>
+        <div id="map">
+            {{ msg | safe }} <!-- La carte générée par Folium sera affichée ici -->
+        </div>
+
+        <h2>Les données</h2>
+        <div id="data">
+            {{ y | safe }} <!-- Cette ligne affiche les données du pays sélectionné -->
+        </div>
+
+        <h2>Graphique des stations GNSS</h2>
+        </div>
+        <div id="bokeh_plot" style="text-align: center;">
+            <div style="display: inline-block;">
+                {{ plot_div|indent(4)|safe }}
+                {{ js_resources|indent(4)|safe }}
+                {{ css_resources|indent(4)|safe }}
+                {{ plot_script|indent(4)|safe }}
+            </div> 
+        </div>
+
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                // Fonction qui se déclenche lors du changement du pays sélectionné
+                $('#country-select').change(function(){
+                    let selectedCountry = $(this).val();
+                    
+                    // Envoyer une requête AJAX à Flask pour obtenir la nouvelle carte et les données
+                    $.ajax({
+                        url: '/update_map',
+                        type: 'GET',
+                        data: { pays: selectedCountry },
+                        success: function(data) {
+                            $('#map').html(data.html_map); // Mise à jour de la carte
+                            $('#data').html(data.html_data); // Mise à jour des données
+                        }
+                    });
+                });
+            });
+        </script>
+    </div>
+</body>
+</html>
+
+
+
+
+ 
